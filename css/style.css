@@ -1,0 +1,57 @@
+body{
+    background-image: url('../Assets/Illustrations/Bathome1.png');
+    /* border: 2px solid #BCBBBD;  */
+    color: white;
+}
+nav{
+    padding: 2% 0% 5% 4%;
+    margin-left: 92px;
+    margin-right: 92px;
+    border: 3px solid rgba(243, 239, 239, 0.1);
+    border-bottom: 4px solid rgba(243, 239, 239, 0.1);
+    border-top: 0px;
+}
+nav li{
+   list-style: none;
+   display: inline-block;
+}
+
+#home{
+    float: right;
+    padding-right: 6%;
+    font-family: 'Space Grotesk', sans-serif;
+    /* font-family: 'Rajdhani', sans-serif; */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+/* #content{
+    margin: 132px 102px 132px 102px;
+} */
+.droite ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 14%;
+}
+
+.droite li{
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-right: 42px;
+}
+
+.intro{ 
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15%;
+    border: 3px solid rgba(243, 239, 239, 0.1);
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 92px;
+    margin-right: 92px;
+}
+
+
