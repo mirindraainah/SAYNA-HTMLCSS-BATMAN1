@@ -1,35 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap'); */
+
+/* Fonts */
+@font-face {
+    font-family: font1;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+/* Style général */
+:root {
+    --yellow-color: #FFFF00;
+    --yellow-light: #F8F184;
+    --blue-color: #19587D;
+    --black1: #000000;
+    --grey-border: rgba(188, 187, 189, 0.1);
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-image: url('../Assets/Illustrations/Bathome1.png');
-    /* border: 2px solid #BCBBBD;  */
+    overflow-x: hidden;
+    background-color: var(--black1);
     color: white;
 }
+
+p {
+    font-family: font2;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: font1;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+button {
+    font-family: font1;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: font2;
+    font-size: 28px;
+    font-weight: 500;
+  
+}
+
+h6 {
+    font-family: font2;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.container{
+    border: 3px solid var(--grey-border);
+    border-top: 0;
+    border-bottom: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+/* Header (première section) */
+header{
+    background-image: url('../Assets/Illustrations/Bathome1.png');
+    background-position: top center;
+    color: white;
+}
+
+/* Nav */
 nav{
-    padding: 2% 0% 5% 4%;
-    margin-left: 92px;
-    margin-right: 92px;
-    border: 3px solid rgba(243, 239, 239, 0.1);
-    border-bottom: 4px solid rgba(243, 239, 239, 0.1);
+    padding: 4% 0% 5% 4%;
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 3px solid var(--grey-border);
+    border-bottom: 4px solid var(--grey-border);
     border-top: 0px;
 }
+
 nav li{
    list-style: none;
    display: inline-block;
 }
 
+/* Scroll Icônes du côté droit */
+.scrollIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    right: 0%;
+    transform: translate(-40%);
+    gap: 20px;
+    z-index: 10;
+}
+
+/* section */
 #home{
     float: right;
     padding-right: 6%;
-    font-family: 'Space Grotesk', sans-serif;
-    /* font-family: 'Rajdhani', sans-serif; */
-    font-size: 20px;
+    /* font-family: 'Space Grotesk', sans-serif; */
+    font-family: font1;
+    font-size: 26px;
     font-weight: bold;
     text-decoration: underline;
     vertical-align: middle;
 }
+
 /* #content{
     margin: 132px 102px 132px 102px;
 } */
-.droite ul{
+
+/* .droite ul{
     float: right;
     list-style-type: none;
     margin-top: 14%;
@@ -40,18 +134,77 @@ nav li{
     padding-bottom: 12px;
     padding-top: 12px;
     padding-right: 42px;
-}
+} */
 
-.intro{ 
-    font-family: 'Space Grotesk', sans-serif;
+/******************************** première section avec les CTA *********************/
+.part1{ 
+    font-family: font2;
     text-align: center;
-    font-size: 18px;
     padding-top: 15%;
-    border: 3px solid rgba(243, 239, 239, 0.1);
-    border-top: 0px;
-    border-bottom: 0px;
-    margin-left: 92px;
-    margin-right: 92px;
 }
 
+.part1 p, .part1 h2{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.part1 h2{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
 
+.part1 button{
+    color: white;
+    font-family: font1;
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 0, 0, 0.4));
+    padding: 20px 40px;
+    margin: 0 20px 100px;
+    border: 0;
+    width: 20%;
+}
+
+.part1 button:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 0, 0, 1));
+}
+
+/* flèche vers la deuxième section */
+.part1 .fleche{
+    display: block;
+    margin-top: 13%;
+}
+
+/********************************** Fin première section *****************/
+
+/***************************Deuxième section **************************/
+.part2 h1, .part2 p{
+    padding: 8% 20% 8% 6%;
+    text-align: justify;
+}
+
+.part2 h1{
+    padding-bottom: 3%;
+}
+
+/* Les trois images */
+.lesTrois {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.lesTrois img{
+    width: 90%;
+}
+
+.les3:hover {
+    transform: scale(1.1);
+}
+
+.les3 p{
+    text-align: center;
+    padding: 6%;
+}
