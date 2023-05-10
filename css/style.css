@@ -17,7 +17,7 @@
     --yellow-light: #F8F184;
     --blue-color: #19587D;
     --black1: #000000;
-    --grey-border: rgba(188, 187, 189, 0.1);
+    --grey-border: rgba(188, 187, 189, 0.2);
     scroll-behavior: smooth;
 }
 
@@ -27,21 +27,33 @@
     box-sizing: border-box;
 }
 
-body{
+body, #home a{
     overflow-x: hidden;
     background-color: var(--black1);
     color: white;
 }
 
-p {
+p{
     font-family: font2;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 h1 {
     font-family: font1;
     font-size: 36px;
+    /* font-weight: 400; */
+}
+
+h2 {
+    font-family: font2;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+figcaption {
+    font-family: font1;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -49,19 +61,6 @@ button {
     font-family: font1;
     font-size: 20px;
     font-weight: 500;
-}
-
-h2 {
-    font-family: font2;
-    font-size: 28px;
-    font-weight: 500;
-  
-}
-
-h6 {
-    font-family: font2;
-    font-size: 22px;
-    font-weight: 400;
 }
 
 .container{
@@ -94,24 +93,11 @@ nav li{
    display: inline-block;
 }
 
-/* Scroll Icônes du côté droit */
-.scrollIcons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 30%;
-    right: 0%;
-    transform: translate(-40%);
-    gap: 20px;
-    z-index: 10;
-}
-
-/* section */
+/* nav*/
 #home{
     float: right;
     padding-right: 6%;
-    /* font-family: 'Space Grotesk', sans-serif; */
+    color: white;
     font-family: font1;
     font-size: 26px;
     font-weight: bold;
@@ -119,28 +105,17 @@ nav li{
     vertical-align: middle;
 }
 
-/* #content{
-    margin: 132px 102px 132px 102px;
-} */
-
-/* .droite ul{
-    float: right;
-    list-style-type: none;
-    margin-top: 14%;
-}
-
-.droite li{
-    text-align: center;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    padding-right: 42px;
-} */
-
 /******************************** première section avec les CTA *********************/
 .part1{ 
     font-family: font2;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 18%;
+}
+
+.part1 h2 {
+    font-family: font2;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 .part1 p, .part1 h2{
@@ -176,26 +151,50 @@ nav li{
 
 /********************************** Fin première section *****************/
 
+/* Scroll Icônes du côté droit */
+.scrollIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    right: 0%;
+    transform: translate(-40%);
+    gap: 20px;
+    z-index: 10;
+}
+
+.scrollIcons img:hover, #home:hover{
+    -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+    filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+}
+
 /***************************Deuxième section **************************/
+.part2{
+    padding-top: 5%;
+}
+
 .part2 h1, .part2 p{
-    padding: 8% 20% 8% 6%;
+    padding: 1% 18% 1% 6%;
     text-align: justify;
 }
 
 .part2 h1{
-    padding-bottom: 3%;
+    font-weight: bold;
 }
 
 /* Les trois images */
-.lesTrois {
+.lesTrois{
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
+    padding-top: 5%;
     padding-left: 60px;
     padding-right: 60px;
     flex-wrap: wrap;
     gap: 30px;
 }
+
 .lesTrois img{
     width: 90%;
 }
@@ -204,7 +203,105 @@ nav li{
     transform: scale(1.1);
 }
 
-.les3 p{
+.les3 figcaption{
     text-align: center;
     padding: 6%;
+}
+
+/* petits ailes à côté de némésis*/
+
+.part2 .ailes {
+    width: 140px;
+    margin-left: 13%;
+    margin-bottom: -5.5%;
+}
+
+/* image de batman à gauche */
+.imgDroit{
+    width: auto;
+    transform: translate(0%, -40%);
+    z-index: 0;
+    position: absolute;
+    right: 0;
+}
+
+.part2 #allies{
+    padding-top: 6%;
+}
+
+/* Justice league */
+.part2jl{
+    padding: 10% 12% 6% 12%;
+    text-align: justify;
+}
+
+.part2jl h1{
+    padding-bottom: 2%;
+    padding: 15px;
+}
+
+/* les super-héros */
+.heros img{
+    width: 100%;
+}
+
+/* sous-partie5 (multimédia) */
+.multimedia{
+    display: flex;
+    flex-direction: row;
+    margin: 4% auto 8% auto;
+    width: auto;
+}
+
+.multimedia .begin{
+    display: flex;
+    margin: auto;
+    margin-right: 0%;
+    height: 210px;
+}
+
+.multimedia .action{
+    background-color: grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 30%;
+    height: auto;
+    padding: 1%;
+    margin: 0 auto;
+    margin-left: 0%;
+}
+
+.multimedia p{
+   font-size: 12px;
+}
+
+.multimedia h6{
+    font-family: font2;
+    font-size: 12px;
+}
+
+.multimedia h5{
+    font-family: font2;
+    font-weight: 400;
+}
+
+.multimedia h4{
+    font-family: font1;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.multimedia .direction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
+}
+
+/* bande annonce */
+.bande img{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
 }
