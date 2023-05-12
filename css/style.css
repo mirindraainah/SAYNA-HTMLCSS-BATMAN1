@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap'); */
 
 /* Fonts */
 @font-face {
@@ -18,6 +17,8 @@
     --blue-color: #19587D;
     --black1: #000000;
     --grey-border: rgba(188, 187, 189, 0.2);
+    --color-black: #1f1e1e;
+    --color-marine: #071b27;
     scroll-behavior: smooth;
 }
 
@@ -25,6 +26,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation-name: entree;
+    animation-duration: 2s;
 }
 
 body, #home a{
@@ -42,7 +45,6 @@ p{
 h1 {
     font-family: font1;
     font-size: 36px;
-    /* font-weight: 400; */
 }
 
 h2 {
@@ -132,7 +134,7 @@ nav li{
     color: white;
     font-family: font1;
     font-size: 20px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 0, 0, 0.4));
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.4), rgba(189, 16, 16, 0.4));
     padding: 20px 40px;
     margin: 0 20px 100px;
     border: 0;
@@ -140,7 +142,7 @@ nav li{
 }
 
 .part1 button:hover {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 0, 0, 1));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgb(177, 28, 28));
 }
 
 /* flèche vers la deuxième section */
@@ -220,7 +222,7 @@ nav li{
 .imgDroit{
     width: auto;
     transform: translate(0%, -40%);
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     right: 0;
 }
@@ -262,6 +264,7 @@ nav li{
 
 .multimedia .action{
     background-color: grey;
+    border: 2px solid transparent;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 30%;
@@ -269,6 +272,7 @@ nav li{
     padding: 1%;
     margin: 0 auto;
     margin-left: 0%;
+    background-image: linear-gradient(100deg, var(--color-black), var(--color-marine));
 }
 
 .multimedia p{
@@ -304,4 +308,181 @@ nav li{
     display: flex;
     width: 85%;
     margin: 0 auto;
+    margin-top: 10%;
+    padding-bottom: 15%;
+}
+
+/* section contact */
+.contact {
+    background-image: linear-gradient(160deg, var(--color-black), var(--color-marine));
+    padding: 5%;
+}
+
+.contact h1 {
+    font-family: font2;
+    font-weight: 500;
+    text-align: center;
+}
+
+label.titre{
+    font-family: font2;
+    font-size: 22px;
+}
+
+.contact .form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact .titre {
+    display: block;
+    margin: 3% 0;
+}
+
+.contact .form input[type='email'],
+textarea {
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 123, 123, 0.932);
+    background-color: transparent;
+    margin: 0% auto 8% auto;
+    padding: 1%;
+}
+
+.contact .news {
+    font-family: font2;
+    font-size: 16px;
+    color: #c4c4c4;
+    border-bottom: 1px solid rgba(128, 123, 123, 0.932);
+    margin: 15px 0;
+}
+
+.contact .cocher{
+    font-family: font2;
+    font-size: 16px;
+    color: #c4c4c4;
+}
+
+.contact .icon{
+    transform: rotate(90deg);
+    width: 2.5%;
+    margin-left: 16%;
+}
+
+ ::placeholder {
+    color: #c4c4c4;
+    font-size: 16px;
+    font-family: font2;
+}
+
+.report{
+    margin-top: 5%;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.btn-group button{
+    padding: 1%;
+    width: 15%;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid;
+    border-image: linear-gradient( 69deg, white,rgb(98, 120, 122), rgb(78, 205, 243))1;
+    color: white;
+    font-family: font2;
+    font-size: 12px;
+}
+
+input[type=submit] {
+    display: block;
+    width: 230px;
+    margin: 25px auto;
+    padding: 2.5% 8% 2.5% 8%;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.4), rgba(189, 16, 16, 0.4));
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-family: font2;
+    font-size: 18px;
+}
+
+/* citation */
+.container2 {
+    margin: auto 20% auto 20%;
+    padding-top: 10%;
+}
+
+#citation .citation-texte {
+    font-size: 18px;
+}
+
+#citation .citation-carte {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#citation .citation-auteur {
+    padding-top: 30px;
+    font-size: 14px;
+    font-family: font1;
+}
+
+#citation .g-close {
+   float: right;
+   margin-top: -120px;
+}
+
+/* Petits ronds */
+.ronds{
+    display: flex;
+    width: 120px;
+    margin: 0 auto;
+}
+
+svg circle{
+    display: flex;
+    flex-direction: column;
+}
+
+/*footer*/
+
+footer {
+    padding-top: 4%;
+    clear: right;
+}
+
+footer .text {
+    text-align: center;
+    font-size: 10px;
+    font-family: font2;
+}
+
+footer .social {
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer .social-items {
+    padding: 10px;
+}
+
+@keyframes entree {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
 }
